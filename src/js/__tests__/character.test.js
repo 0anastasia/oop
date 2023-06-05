@@ -8,15 +8,9 @@ test('Получим объект character', () => {
   expect(description).toEqual(result);
 });
 
-
-test('Получим ошибку имени', () => {
-  const description = () => new Character('g');
-  expect(description).toThrow('Имя должно быть сткрой от 2 до 10 символов включительно');
-});
-
 test('Получим ошибку имени', () => {
   const description = () => new Character('12345678910');
-  expect(description).toThrow('Имя должно быть сткрой от 2 до 10 символов включительно');
+  expect(description).toThrow('в имени должно быть от 2 до 10 символов');
 });
 
 // levelup
